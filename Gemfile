@@ -45,3 +45,12 @@ group :development do
   # gem "spring"
 end
 
+#-----------   added after    -----------------------------------------------
+
+gem 'mysql2', '>= 0.5.3'
+
+gem 'jwt'
+
+gem 'nokogiri'
+
+gem "bcrypt", "~> 3.1.7"
