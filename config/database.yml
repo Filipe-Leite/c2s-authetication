@@ -8,14 +8,14 @@ default: &default
 
 development:
   <<: *default
-  database: c2s-development
+  database: c2s-authentication-development
 
-test:
-  <<: *default
-  database: c2s-test
+# test:
+#   <<: *default
+#   database: c2s-test
 
-production:
-  <<: *default
-  database: c2s-production
-  username: c2sadmin
-  password: 1234
+# production:
+#   <<: *default
+#   database: c2s-production
+#   username: c2sadmin
+#   password: 1234

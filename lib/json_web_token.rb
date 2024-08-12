@@ -1,5 +1,5 @@
 module JsonWebToken
-  SECRET_KEY = Rails.application.secrets.secret_key_base
+  SECRET_KEY = Rails.application.credentials.secret_key_base
 
   def self.issue_token(payload)
     JWT.encode(payload, SECRET_KEY, 'HS256')

@@ -23,6 +23,25 @@ class AuthController < ApplicationController
     end
   end
 
+  def validate_token
+    token = request.headers['Authorization']&.split(' ')&.last
+    decoded_token = JsonWebToken.decode_token(token)
+
+    if decoded_token
+      @user = User.find_by(id: decoded_token["user_id"])
+      
+      if @user
+        render json: @user, status: :ok
+      else
+        render json: { error: 'Invalid token' }, status: :unauthorized
+      end
+    else
+      render json: { error: 'Invalid token' }, status: :unauthorized
+    end
+  rescue JWT::DecodeError
+    render json: { error: 'Invalid token' }, status: :unauthorized
+  end
+
   def logout
     render json: { message: 'Logged out' }, status: :ok
   end
