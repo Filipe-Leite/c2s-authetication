@@ -13,7 +13,7 @@ namespace :db do
 
     if User.all.length == 0 
 
-      usernames = ['user0@email.com','user1@email.com']
+      usernames = ['user1@email.com','user2@email.com','user2@email.com']
 
       usernames.each do |user|
         User.create(
