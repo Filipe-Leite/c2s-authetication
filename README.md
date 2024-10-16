@@ -3,10 +3,10 @@
 ### Ruby - Ruby on rails:
 #### The microservices was wrote in ruby and each microservice has one responsibility
 
-Authentication [back-end]
-Web-scraping [back-end]
-Tasks [back-end]
-Notifications [back-end]
+Authentication [back-end] <br>
+Web-scraping [back-end] <br>
+Tasks [back-end] <br>
+Notifications [back-end] <br>
 
 ### Typescript – React.js:
 #### The frontend consumes all the microservices.
@@ -16,7 +16,7 @@ Front-end
 ### Databases:
 #### Each microservice has one different database, the redis dabase is for store the notifications.
 
-MySql
+MySql <br>
 Redis
 
 ### Typescript – Node.js:
